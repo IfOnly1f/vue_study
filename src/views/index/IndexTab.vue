@@ -3,6 +3,10 @@
         <ul>
             <li v-for = "(val,ind) in list" :key="ind">{{val}}</li>
         </ul>
+        <hr>
+        <ul>
+            <li v-for="(val,ind) in testList" :key="ind">{{val}}</li>
+        </ul>
         <button @click="add">添加</button>
     </div>
 </template>
@@ -20,6 +24,7 @@
             } */
             ...mapState({
                 list: state => state.dataList,
+                testList:state => state.testList
             })
         },
         methods:{

@@ -7,6 +7,7 @@ Vue.use(Vuex)
 const state = {
     count:1,
     dataList:['hello'],
+    testList:['a','w','s','d']
 }
 export default new Vuex.Store({
     state,
