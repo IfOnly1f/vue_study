@@ -1,0 +1,1 @@
+export const SET_DATALIST = 'SET_DATALIST'
