@@ -8,11 +8,16 @@
             <li v-for="(val,ind) in testList" :key="ind">{{val}}</li>
         </ul>
         <button @click="add">添加</button>
+        <x-button @click.native="goTo">goto</x-button>
     </div>
 </template>
 <script>
-    import {mapState} from 'vuex'
+    import {mapState} from 'vuex';
+    import { XButton } from 'vux';
     export default {
+        components:{
+            XButton
+        },
         data() {
             return {
 
@@ -30,6 +35,9 @@
         methods:{
             add() {
                 this.$store.dispatch('setDataList',2)
+            },
+            goTo() {
+                this.$router.push({path:'/dynamic'})
             }
         }
     }
